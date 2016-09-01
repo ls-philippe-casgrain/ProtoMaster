@@ -7,7 +7,7 @@ Inherits TestGroup
 		  
 		  ti.title = "Hello, world!"
 		  
-		  Assert.AreEqual(ti.title, "Hello, world!")
+		  Assert.AreEqual(ti.title, "We are the world")
 		  
 		End Sub
 	#tag EndMethod
