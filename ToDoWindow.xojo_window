@@ -215,6 +215,22 @@ End
 #tag EndWindow
 
 #tag WindowCode
+	#tag Method, Flags = &h0
+		Sub Constructor()
+		  // Calling the overridden superclass constructor.
+		  Super.Constructor
+		  
+		  self.controller = new ToDoController
+		  self.controller.listView = self.TaskListBox
+		End Sub
+	#tag EndMethod
+
+
+	#tag Property, Flags = &h21
+		Private controller As ToDoController
+	#tag EndProperty
+
+
 #tag EndWindowCode
 
 #tag Events TaskListBox
@@ -274,7 +290,7 @@ End
 #tag Events AddButton
 	#tag Event
 		Sub Action()
-		  TaskListBox.AddRow("", TaskField.Text)
+		  self.controller.Add(TaskField.Text)
 		End Sub
 	#tag EndEvent
 #tag EndEvents
