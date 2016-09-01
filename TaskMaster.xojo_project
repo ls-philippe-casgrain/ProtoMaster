@@ -52,6 +52,6 @@ AppIcon=TaskMaster.xojo_resources;&h0
 OSXBundleID=com.xojo.todo
 DebuggerCommandLine=
 UseGDIPlus=False
-UseBuildsFolder=True
+UseBuildsFolder=False
 HiDPI=True
 IsWebProject=False
