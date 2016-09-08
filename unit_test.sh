@@ -14,7 +14,8 @@ RESULTS_TEMPORARY_FILE="/tmp/$RESULTS_NAME"
 RESULTS_FINAL_FILE="$SCRIPT_PATH/$RESULTS_NAME"
 
 # Clean up the build results in case they exist
-rm -rf "$RESULTS_FILE" || true
+rm -rf "$RESULTS_FINAL_FILE" || true
+rm -rf "$RESULTS_TEMPORARY_FILE" || true
 
 echo "Running tests for $EXECUTABLE_NAME..."
 
