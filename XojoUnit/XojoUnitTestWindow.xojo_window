@@ -820,7 +820,7 @@ End
 		  args = Split(System.CommandLine().Lowercase(), " ")
 		  Dim runUnitTest As Integer = args.IndexOf("--rununittests")
 		  If runUnitTest > 0 And Ubound(args) > runUnitTest Then
-		    self.exportFilePath = args(runUnitTest + 1)
+		    self.exportFilePath = ConvertEncoding(args(runUnitTest + 1), Encodings.UTF8)
 		    RunTests
 		  End
 		End Sub
